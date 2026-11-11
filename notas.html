@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="./Style/Notas.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+      <div class="sidebar-content">
+        <h1>Bloco de Notas</h1>
+        <p>Organize suas ideias em um só lugar.</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Sair</button>
+    </aside>
+
+    <main class="main">
+
+      <header class="topbar">
+        <div>
+          <h2>Minhas notas</h2>
+          <span id="nomeUsuario"></span>
+        </div>
+        <button id="abrirFormBtn" class="btn-primary">+ Nova nota</button>
+      </header>
+
+      <div id="modalOverlay" class="modal-overlay hidden">
+  <div class="modal">
+    <h3>Criar Nova Nota</h3>
+    <form id="notaForm">
+      <input type="hidden" id="notaId">
+      <h4>Título</h4>
+      <input type="text" id="titulo" placeholder="Título da nota">
+    <h4>Conteúdo</h4>
+      <textarea id="conteudo" placeholder="Escreva sua nota aqui..."></textarea>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Salvar</button>
+        <button type="button" id="cancelarBtn" class="btn-secondary">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+      <section>
+        <div id="listaNotas" class="notas-grid"></div>
+        <p id="semNotas" class="sem-notas">Nenhuma nota criada ainda.</p>
+      </section>
+      </main>
+    </div>
+
+    <script src="Js/notas.js"></script>
+    
+</body>
+</html>
